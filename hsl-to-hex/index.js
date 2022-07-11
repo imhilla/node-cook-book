@@ -41,10 +41,12 @@ function hsl(hue, saturation, luminosity) {
   // a string, prfixed with a bash
   return (
     "#" +
-    rgb.map(function (n) {
-      return (256 + n).toString(16).substr(-2);
-    })
-  ).join("");
+    rgb
+      .map(function (n) {
+        return (256 + n).toString(16).substr(-2);
+      })
+      .join("")
+  );
 }
 
 module.exports = hsl;
