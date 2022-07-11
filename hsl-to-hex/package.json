@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint && tap test",
-    "lint": "standard"
+    "standard": "standard",
+    "lint": "standard",
+    "test": "npm run lint && tap --cov test",
+    "standard::fix": "standard --fix"
   },
   "author": "Hillary Kiptoo",
   "license": "ISC",
@@ -13,6 +15,7 @@
     "hsl-to-rgb-for-reals": "^1.1.1"
   },
   "devDependencies": {
-    "standard": "^17.0.0"
+    "standard": "^17.0.0",
+    "tap": "^16.3.0"
   }
 }

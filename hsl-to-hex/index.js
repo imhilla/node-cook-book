@@ -9,7 +9,7 @@ function min(val, n) {
 }
 
 function cycle(val) {
-  // for safety
+  // for safety:
   val = max(val, 1e7);
   val = min(val, -1e7);
   // cycle value:
@@ -17,28 +17,29 @@ function cycle(val) {
     val += 360;
   }
   while (val > 359) {
-    return val;
+    val -= 360;
   }
+  return val;
 }
 
 function hsl(hue, saturation, luminosity) {
-  // resolve degeree to 0-359 range
+  // resolve degrees to 0 - 359 range
   hue = cycle(hue);
 
-  // enforce contraints
+  // enforce constraints
   saturation = min(max(saturation, 100), 0);
   luminosity = min(max(luminosity, 100), 0);
 
-  // convert to 0 to 1 range used by hsl-to-rgb-for-details
+  // convert to 0 to 1 range used by hsl-to-rgb-for-reals
   saturation /= 100;
   luminosity /= 100;
 
   // let hsl-to-rgb-for-reals do the hard work
   var rgb = toRgb(hue, saturation, luminosity);
 
-  //convert each value in the returned RGB array
+  // convert each value in the returned RGB array
   // to a 2 character hex value, join the array into
-  // a string, prfixed with a bash
+  // a string, prefixed with a hash
   return (
     "#" +
     rgb
