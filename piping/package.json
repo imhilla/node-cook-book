@@ -1,0 +1,15 @@
+{
+  "name": "piping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Hillary Kiptoo",
+  "license": "ISC",
+  "dependencies": {
+    "base64-encode-stream": "^1.0.0"
+  }
+}
