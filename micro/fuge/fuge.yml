@@ -22,3 +22,9 @@ image: mongo
 type: container
 ports:
   - main=27017:27017
+auditservice:
+  type: process
+  path: ../auditservice
+  run: "node index.js"
+  ports:
+    - main=8081
