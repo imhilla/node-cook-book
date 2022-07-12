@@ -1,0 +1,13 @@
+D:\Node projects\node-cook-book\micro\adderservice\writing.js:18
+  server.listen(ADDERSERVICE_SERVICE_PORT, "0.0.0.0", () => {
+                ^
+
+ReferenceError: ADDERSERVICE_SERVICE_PORT is not defined
+    at wiring (D:\Node projects\node-cook-book\micro\adderservice\writing.js:18:17)
+    at Object.<anonymous> (D:\Node projects\node-cook-book\micro\adderservice\index.js:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1101:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:17:47
